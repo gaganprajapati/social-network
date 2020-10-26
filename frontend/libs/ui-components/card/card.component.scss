@@ -1,0 +1,11 @@
+:host {
+  display: flex;
+}
+
+.display-pic {
+  width: 140px;
+  height: 140px;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-origin: border;
+}

@@ -1,0 +1,7 @@
+<ng-content select="sn-list-body"></ng-content>
+<div>
+  <button (click)="onPrevClick()" [disabled]="currentPageNumber === 1">
+    Prev
+  </button>
+  <button (click)="onNextClick()" [disabled]="isEndOfList">Next</button>
+</div>

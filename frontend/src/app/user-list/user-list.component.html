@@ -1,0 +1,7 @@
+<sn-list (pageChange)="getUsers($event)" [isEndOfList]="isEndOfList">
+  <sn-list-body>
+    <sn-card *ngFor="let user of users" src="./assets/images/dp.jpg" (click)="goToUserProfile(user.id)">
+      <sn-card-body> {{ user.firstName }} {{ user.lastName }} </sn-card-body>
+    </sn-card>
+  </sn-list-body>
+</sn-list>

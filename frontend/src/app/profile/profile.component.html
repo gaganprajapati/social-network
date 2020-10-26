@@ -1,0 +1,20 @@
+<div class="user-info-container" *ngIf="user">
+  <div class="user-info">
+    <div class="user-dp"></div>
+    <div class="user-name">{{ user.firstName }} {{ user.lastName }}</div>
+  </div>
+</div>
+<div class="friend-list-container">
+  <div class="title">Friends</div>
+  <sn-list (pageChange)="getUserFriends($event)" [isEndOfList]="isEndOfList">
+    <sn-list-body>
+      <sn-card
+        *ngFor="let user of friends"
+        src="./assets/images/dp.jpg"
+        (click)="goToUserProfile(user.id)"
+      >
+        <sn-card-body> {{ user.firstName }} {{ user.lastName }} </sn-card-body>
+      </sn-card>
+    </sn-list-body>
+  </sn-list>
+</div>

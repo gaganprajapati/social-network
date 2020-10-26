@@ -57,8 +57,7 @@ module.exports.getUser = async (req, res) => {
  * @apiParam {Number} count Friends to view per page.
  *
  * @apiSuccess {Object[]} friends List of friends.
- * @apiSuccess {Number} friends.user_id_1 ID of the User.
- * @apiSuccess {Number} friends.user_id_2 ID of the User.
+ * @apiSuccess {Number} friends.id ID of the Friend User.
  * @apiSuccess {String} friends.firstName First name of the User.
  * @apiSuccess {String} friends.lastName  Last name of the User.
  * @apiSuccess {String} friends.avatar  Avatar of the User.

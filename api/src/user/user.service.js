@@ -18,10 +18,10 @@ module.exports.getUser = async (id) => {
 module.exports.getFriends = async (id, page, itemsPerPage) => {
   const offset = (page - 1) * itemsPerPage;
   let db = await connectionManager.getConnection();
-  const query = `SELECT users.firstName, users.lastName, users.avatar, friends.user_id_1, friends.user_id_2 
+  const query = `SELECT users.id, users.firstName, users.lastName, users.avatar
     FROM friends INNER JOIN users ON users.id = friends.user_id_2 
     WHERE friends.user_id_1 = ${id} UNION 
-    SELECT users.firstName, users.lastName, users.avatar, friends.user_id_1, friends.user_id_2 
+    SELECT users.id, users.firstName, users.lastName, users.avatar 
     FROM friends INNER JOIN users ON users.id = friends.user_id_1 WHERE friends.user_id_2 = ${id} LIMIT ${offset}, ${itemsPerPage}`;
   const friends = await db.query(query);
   db.end();

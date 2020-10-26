@@ -4,11 +4,20 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-api-doc": "./node_modules/apidoc/bin/apidoc -i src/ -o ../api-doc/"
   },
   "author": "Gagan Prajapati",
   "license": "ISC",
+  "apidoc": {
+    "title": "Social Network API",
+    "url": "localhost:8888/doc"
+  },
   "dependencies": {
-    "mysql": "^2.18.1"
+    "apidoc": "^0.25.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5"
   }
 }

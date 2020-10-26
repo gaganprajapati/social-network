@@ -12,6 +12,7 @@
 - Run the command `npm i` to install all the dependencies.
 - Run the command `node server.js` to run the backend server. Alternatively you can use `nodemon` to run the server.
 > Important: The backend server runs on port: **8888**.
+
 > Note: There is no authentication check for API requests so you can test the API URLs directly in browser.
 
 ### API documentation:
